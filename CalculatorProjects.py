@@ -1,19 +1,18 @@
 #Calculatorproject using Tkinder
 
 #import everything from tkinder module
-from tkinter import  *
 
-#globally declare the expression variable
-expression=""
+from tkinter import *
 
-#in the text entry box
-def press(num):
+expression = ""  #globally declare the expression variable
+
+def press(num):  #in the text entry box
 
     global expression
 
-    expression=expression+str(num) #concatenation of string
+    expression = expression + str(num)   #concatenation of string
 
-    equation.set(expression)       #function to evaluate the final expression
+    equation.set(expression)      #function to evaluate by using set method
 
 def equalpress():
 
@@ -25,16 +24,33 @@ def equalpress():
 
         equation.set(total)
 
-        expression = ""           #initialise the expression variable
+        expression = ""
 
-    except:
+    except:             #by the expect block
 
         equation.set(" error ")
         expression = ""
 
-def clear():
+def clear():         #function to clear the content
     global expression
     expression = ""
     equation.set("")
 
-    
+if __name__ == "__main__":
+
+    gui = Tk()
+
+    gui.configure(background="#EBEEF3")
+
+    gui.title("Simple Calculator")
+
+    gui.geometry("285x400")
+
+    equation = StringVar()
+
+    expression_field = Entry(gui, textvariable=equation)
+
+    expression_field.grid(columnspan=4, ipadx=75,ipady=25,padx=4,pady=10)
+
+    equation.set('enter your expression')
+
