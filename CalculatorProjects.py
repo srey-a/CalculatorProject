@@ -122,3 +122,10 @@ if __name__ == "__main__":  #create a GUI window
                    command=clear, height=4, width=7,bd=5)
     clear.grid(row=5, column='1')
 
+    Decimal = Button(gui, text='.', fg='black', bg='red',
+                     command=lambda: press('.'), height=1, width=7)
+    Decimal.grid(row=6, column=0)
+    # start the GUI
+    gui.mainloop()
+
+
