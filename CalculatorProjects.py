@@ -97,3 +97,28 @@ if __name__ == "__main__":  #create a GUI window
                      command=lambda: press(0), height=4, width=7, bd=5)
     button0.grid(row=5, column=0)
 
+
+    plus = Button(gui, text=' + ', fg='black', bg="#669999",
+                  command=lambda: press("+"), height=4, width=7,bd=5)
+    plus.grid(row=2, column=3)
+
+    minus = Button(gui, text=' - ', fg='black', bg="#669999",
+                   command=lambda: press("-"), height=4, width=7,bd=5)
+    minus.grid(row=3, column=3)
+
+    multiply = Button(gui, text=' * ', fg='black', bg="#669999",
+                      command=lambda: press("*"), height=4, width=7,bd=5)
+    multiply.grid(row=4, column=3)
+
+    divide = Button(gui, text=' / ', fg='black', bg="#669999",
+                    command=lambda: press("/"), height=4, width=7,bd=5)
+    divide.grid(row=5, column=3)
+
+    equal = Button(gui, text=' = ', fg='black', bg="#669999",
+                   command=equalpress, height=4, width=7,bd=5)
+    equal.grid(row=5, column=2)
+
+    clear = Button(gui, text='Clear', fg='black', bg="#669999",
+                   command=clear, height=4, width=7,bd=5)
+    clear.grid(row=5, column='1')
+
