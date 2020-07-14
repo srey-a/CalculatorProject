@@ -14,3 +14,27 @@ def press(num):
     expression=expression+str(num) #concatenation of string
 
     equation.set(expression)       #function to evaluate the final expression
+
+def equalpress():
+
+    try:
+
+        global expression
+
+        total = str(eval(expression))
+
+        equation.set(total)
+
+        expression = ""           #initialise the expression variable
+
+    except:
+
+        equation.set(" error ")
+        expression = ""
+
+def clear():
+    global expression
+    expression = ""
+    equation.set("")
+
+    
